@@ -1,0 +1,39 @@
+@url_user = http://localhost:3000/api/user/
+
+
+@json_user = Content-Type: application/json
+
+
+###
+#POST Register New User
+POST {{url_user}}register
+{{json_user}}
+
+{
+    "name": "Edward",
+    "email": "stianyu99@vt.edu",
+    "password": "123456",
+    "identity": "Admin"
+}
+
+###
+#GET List All User - Testing
+GET {{url_user}}users
+
+###
+#POST Login
+POST {{url_user}}login
+{{json_user}}
+
+{
+    "email": "stianyu99@vt.edu",
+    "password": "123456"
+}
+
+# Current User Private API should be fixed later
+###
+#GET Current User Testing
+GET {{url_user}}current
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MDYzYmZmNzczNjVkOGJmYzA4MTk5MyIsIm5hbWUiOiJFZHdhcmQiLCJpZGVudGl0eSI6IkFkbWluIiwiaWF0IjoxNjk0OTA5MjQzLCJleHAiOjE2OTQ5MTIyNDN9.xMRB6K0QB0gY2u4p_Wr9F5VwFdpgDyFl6dgixeNYkng
+
+##############################################################################################

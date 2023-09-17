@@ -2,6 +2,9 @@ import express from 'express';
 import bodyParser from 'body-parser';
 import cors from 'cors';
 import connectMongoDB from '../plugin/db.js';
+import userRoutes from '../routes/user_index.js';
+import initializePassport from '../plugin/passport.js'
+import passport from 'passport';
 
 const app = express();
 //-- Server Port
@@ -16,15 +19,16 @@ app.use(cors());
 //-- JSON
 app.use(bodyParser.json());
 
+//-- Passport Authentication
+initializePassport(passport);
+
 //-- DB Plugin
 connectMongoDB(app);
 
 //-- Routes Module
+//- User Module
+userRoutes(app);
 
-
-app.get('/',(res, req) =>{
-    console.log('environment setting');
-})
 
 
 
