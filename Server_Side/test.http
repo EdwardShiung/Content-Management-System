@@ -1,8 +1,12 @@
 @url_user = http://localhost:3000/api/user/
+
 @url_category= http://localhost:3000/api/category/
+@url_article= http://localhost:3000/api/article/
 
 @json_user = Content-Type: application/json
 @json_category = content-Type: application/json
+@json_article = content-Type: application/json
+
 
 ###
 #POST Register New User
@@ -38,7 +42,7 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MDYzYmZmN
 
 ##############################################################################################
 
-###
+###--- Category
 #Post Create a Category
 POST {{url_category}}create
 {{json_category}}
@@ -73,3 +77,20 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MDYzYmZmN
 ###
 #GET List All Categories - Testing (No Need Authorization)
 GET {{url_category}}categories
+
+##############################################################################################
+
+###--- Article
+
+###
+#POST Create a Task
+POST {{url_task}}create
+{{json_task}}
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0MGE2YjViMDQzOTFlZDdkN2Q4ZTAwOSIsIm5hbWUiOiJFZHdhcmQiLCJpZGVudGl0eSI6IkFkbWluIiwiaWF0IjoxNjc4NTIxMTA0LCJleHAiOjE2Nzg1MjQxMDR9.y7ElXaq343_ERcMSsbB_0t-esR1BJzg4KzM5KfrVkFw"
+
+{
+    "userId": "640a6b5b04391ed7d7d8e009",
+    "taskName": "Project Proposal",
+    "status": "Pending",
+    "date": "2023/04/30"
+}
