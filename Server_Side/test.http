@@ -1,8 +1,8 @@
 @url_user = http://localhost:3000/api/user/
-
+@url_category= http://localhost:3000/api/category/
 
 @json_user = Content-Type: application/json
-
+@json_category = content-Type: application/json
 
 ###
 #POST Register New User
@@ -17,7 +17,7 @@ POST {{url_user}}register
 }
 
 ###
-#GET List All User - Testing
+#GET List All User - Testing (No Need Authorization)
 GET {{url_user}}users
 
 ###
@@ -34,6 +34,42 @@ POST {{url_user}}login
 ###
 #GET Current User Testing
 GET {{url_user}}current
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MDYzYmZmNzczNjVkOGJmYzA4MTk5MyIsIm5hbWUiOiJFZHdhcmQiLCJpZGVudGl0eSI6IkFkbWluIiwiaWF0IjoxNjk0OTA5MjQzLCJleHAiOjE2OTQ5MTIyNDN9.xMRB6K0QB0gY2u4p_Wr9F5VwFdpgDyFl6dgixeNYkng
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MDYzYmZmNzczNjVkOGJmYzA4MTk5MyIsIm5hbWUiOiJFZHdhcmQiLCJpZGVudGl0eSI6IkFkbWluIiwiaWF0IjoxNjk0OTM0NDIxLCJleHAiOjE2OTQ5Mzc0MjF9.GtdE3_Ha9rAhjz64X4I-wCfzgiSu9YsDRXq0iPiLGxI
 
 ##############################################################################################
+
+###
+#Post Create a Category
+POST {{url_category}}create
+{{json_category}}
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MDYzYmZmNzczNjVkOGJmYzA4MTk5MyIsIm5hbWUiOiJFZHdhcmQiLCJpZGVudGl0eSI6IkFkbWluIiwiaWF0IjoxNjk0OTM0NDIxLCJleHAiOjE2OTQ5Mzc0MjF9.GtdE3_Ha9rAhjz64X4I-wCfzgiSu9YsDRXq0iPiLGxI
+
+{
+    "name":"JavaScript",
+    "parent":"65069fac698e7a712e72dc9b"
+}
+
+###
+#GET ALL Categorical List by User
+GET {{url_category}}categoicalList
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MDYzYmZmNzczNjVkOGJmYzA4MTk5MyIsIm5hbWUiOiJFZHdhcmQiLCJpZGVudGl0eSI6IkFkbWluIiwiaWF0IjoxNjk0OTM0NDIxLCJleHAiOjE2OTQ5Mzc0MjF9.GtdE3_Ha9rAhjz64X4I-wCfzgiSu9YsDRXq0iPiLGxI
+
+###
+#PUT Update one of Categories
+PUT {{url_category}}65069624d281709fa7340802
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MDYzYmZmNzczNjVkOGJmYzA4MTk5MyIsIm5hbWUiOiJFZHdhcmQiLCJpZGVudGl0eSI6IkFkbWluIiwiaWF0IjoxNjk0OTM0NDIxLCJleHAiOjE2OTQ5Mzc0MjF9.GtdE3_Ha9rAhjz64X4I-wCfzgiSu9YsDRXq0iPiLGxI
+{{json_category}}
+
+{
+    "name": "Traveling"
+}
+
+###
+#DELETE Delete one of Categories
+DELETE {{url_category}}65069ade868c6f3b5909d670
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MDYzYmZmNzczNjVkOGJmYzA4MTk5MyIsIm5hbWUiOiJFZHdhcmQiLCJpZGVudGl0eSI6IkFkbWluIiwiaWF0IjoxNjk0OTM0NDIxLCJleHAiOjE2OTQ5Mzc0MjF9.GtdE3_Ha9rAhjz64X4I-wCfzgiSu9YsDRXq0iPiLGxI
+
+
+###
+#GET List All Categories - Testing (No Need Authorization)
+GET {{url_category}}categories

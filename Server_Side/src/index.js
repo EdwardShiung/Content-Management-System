@@ -3,6 +3,7 @@ import bodyParser from 'body-parser';
 import cors from 'cors';
 import connectMongoDB from '../plugin/db.js';
 import userRoutes from '../routes/user_index.js';
+import categoricalRoutes from '../routes/category_index.js';
 import initializePassport from '../plugin/passport.js'
 import passport from 'passport';
 
@@ -28,10 +29,8 @@ connectMongoDB(app);
 //-- Routes Module
 //- User Module
 userRoutes(app);
-
-
-
-
+//- Categorical Module
+categoricalRoutes(app);
 
 app.listen(port, ()=>{
     console.log(`Server is listening on port ${port}`);

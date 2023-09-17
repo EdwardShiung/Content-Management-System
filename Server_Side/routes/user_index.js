@@ -38,8 +38,8 @@ const userRoutes = (app) =>{
                 const addUser = await newUser.save();
                 return res.json(addUser);
             }
-        } catch (err) {
-            console.log(err);
+        } catch (error) {
+            console.log(or);
             res.status(500).json('Server Problem');
         }
     });
@@ -76,8 +76,8 @@ const userRoutes = (app) =>{
             }else{
                 return res.status(400).json('Wrong Password');
             }
-        } catch (err) {
-            console.log(err.message);
+        } catch (error) {
+            console.log(error.message);
             res.status(500).json('Server Problem')
         }
     });
