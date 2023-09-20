@@ -1,5 +1,4 @@
 @url_user = http://localhost:3000/api/user/
-
 @url_category= http://localhost:3000/api/category/
 @url_article= http://localhost:3000/api/article/
 
@@ -21,10 +20,6 @@ POST {{url_user}}register
 }
 
 ###
-#GET List All User - Testing (No Need Authorization)
-GET {{url_user}}users
-
-###
 #POST Login
 POST {{url_user}}login
 {{json_user}}
@@ -34,11 +29,15 @@ POST {{url_user}}login
     "password": "123456"
 }
 
-# Current User Private API should be fixed later
+# Current User Private API
 ###
 #GET Current User Testing
 GET {{url_user}}current
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MDYzYmZmNzczNjVkOGJmYzA4MTk5MyIsIm5hbWUiOiJFZHdhcmQiLCJpZGVudGl0eSI6IkFkbWluIiwiaWF0IjoxNjk0OTM0NDIxLCJleHAiOjE2OTQ5Mzc0MjF9.GtdE3_Ha9rAhjz64X4I-wCfzgiSu9YsDRXq0iPiLGxI
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MDYzYmZmNzczNjVkOGJmYzA4MTk5MyIsIm5hbWUiOiJFZHdhcmQiLCJpZGVudGl0eSI6IkFkbWluIiwiaWF0IjoxNjk1MDU1MzgwLCJleHAiOjE2OTUwNTgzODB9.NoE_0NCb8AbFomf9soklqpyGd6lt7Q1lQZRXkjVfFXc
+
+###
+#GET List All User - Testing (No Need Authorization)
+GET {{url_user}}users
 
 ##############################################################################################
 
@@ -46,7 +45,7 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MDYzYmZmN
 #Post Create a Category
 POST {{url_category}}create
 {{json_category}}
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MDYzYmZmNzczNjVkOGJmYzA4MTk5MyIsIm5hbWUiOiJFZHdhcmQiLCJpZGVudGl0eSI6IkFkbWluIiwiaWF0IjoxNjk0OTM0NDIxLCJleHAiOjE2OTQ5Mzc0MjF9.GtdE3_Ha9rAhjz64X4I-wCfzgiSu9YsDRXq0iPiLGxI
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MDYzYmZmNzczNjVkOGJmYzA4MTk5MyIsIm5hbWUiOiJFZHdhcmQiLCJpZGVudGl0eSI6IkFkbWluIiwiaWF0IjoxNjk1MDU1MzgwLCJleHAiOjE2OTUwNTgzODB9.NoE_0NCb8AbFomf9soklqpyGd6lt7Q1lQZRXkjVfFXc
 
 {
     "name":"JavaScript",
@@ -55,13 +54,13 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MDYzYmZmN
 
 ###
 #GET ALL Categorical List by User
-GET {{url_category}}categoicalList
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MDYzYmZmNzczNjVkOGJmYzA4MTk5MyIsIm5hbWUiOiJFZHdhcmQiLCJpZGVudGl0eSI6IkFkbWluIiwiaWF0IjoxNjk0OTM0NDIxLCJleHAiOjE2OTQ5Mzc0MjF9.GtdE3_Ha9rAhjz64X4I-wCfzgiSu9YsDRXq0iPiLGxI
+GET {{url_category}}categoricalList
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MDYzYmZmNzczNjVkOGJmYzA4MTk5MyIsIm5hbWUiOiJFZHdhcmQiLCJpZGVudGl0eSI6IkFkbWluIiwiaWF0IjoxNjk1MDU1MzgwLCJleHAiOjE2OTUwNTgzODB9.NoE_0NCb8AbFomf9soklqpyGd6lt7Q1lQZRXkjVfFXc
 
 ###
 #PUT Update one of Categories
 PUT {{url_category}}65069624d281709fa7340802
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MDYzYmZmNzczNjVkOGJmYzA4MTk5MyIsIm5hbWUiOiJFZHdhcmQiLCJpZGVudGl0eSI6IkFkbWluIiwiaWF0IjoxNjk0OTM0NDIxLCJleHAiOjE2OTQ5Mzc0MjF9.GtdE3_Ha9rAhjz64X4I-wCfzgiSu9YsDRXq0iPiLGxI
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MDYzYmZmNzczNjVkOGJmYzA4MTk5MyIsIm5hbWUiOiJFZHdhcmQiLCJpZGVudGl0eSI6IkFkbWluIiwiaWF0IjoxNjk0OTgzNDg1LCJleHAiOjE2OTQ5ODY0ODV9.uXDq73yg0OCin7m8hxLz8AuozBBoUHjhZYjIMU7eDk4
 {{json_category}}
 
 {
@@ -71,7 +70,7 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MDYzYmZmN
 ###
 #DELETE Delete one of Categories
 DELETE {{url_category}}65069ade868c6f3b5909d670
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MDYzYmZmNzczNjVkOGJmYzA4MTk5MyIsIm5hbWUiOiJFZHdhcmQiLCJpZGVudGl0eSI6IkFkbWluIiwiaWF0IjoxNjk0OTM0NDIxLCJleHAiOjE2OTQ5Mzc0MjF9.GtdE3_Ha9rAhjz64X4I-wCfzgiSu9YsDRXq0iPiLGxI
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MDYzYmZmNzczNjVkOGJmYzA4MTk5MyIsIm5hbWUiOiJFZHdhcmQiLCJpZGVudGl0eSI6IkFkbWluIiwiaWF0IjoxNjk0OTgzNDg1LCJleHAiOjE2OTQ5ODY0ODV9.uXDq73yg0OCin7m8hxLz8AuozBBoUHjhZYjIMU7eDk4
 
 
 ###
@@ -83,14 +82,41 @@ GET {{url_category}}categories
 ###--- Article
 
 ###
-#POST Create a Task
-POST {{url_task}}create
-{{json_task}}
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0MGE2YjViMDQzOTFlZDdkN2Q4ZTAwOSIsIm5hbWUiOiJFZHdhcmQiLCJpZGVudGl0eSI6IkFkbWluIiwiaWF0IjoxNjc4NTIxMTA0LCJleHAiOjE2Nzg1MjQxMDR9.y7ElXaq343_ERcMSsbB_0t-esR1BJzg4KzM5KfrVkFw"
+#POST Create a Article
+POST {{url_article}}create
+{{json_article}}
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MDYzYmZmNzczNjVkOGJmYzA4MTk5MyIsIm5hbWUiOiJFZHdhcmQiLCJpZGVudGl0eSI6IkFkbWluIiwiaWF0IjoxNjk0OTgzNDg1LCJleHAiOjE2OTQ5ODY0ODV9.uXDq73yg0OCin7m8hxLz8AuozBBoUHjhZYjIMU7eDk4
 
 {
-    "userId": "640a6b5b04391ed7d7d8e009",
-    "taskName": "Project Proposal",
-    "status": "Pending",
-    "date": "2023/04/30"
+    "userId": "65063bd777365d8bfc08198f",
+    "coverPic": "jkljlkjkldjklwjdlwkjdlk",
+    "title":"Large Language Model in Out Society",
+    "categories": "65069fac698e7a712e72dc9b",
+    "body": "Hi, I would like to talke about OPEN AI",
+    "status": "3"
 }
+
+###
+#GET All Article List by User
+GET {{url_article}}articleList
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MDYzYmZmNzczNjVkOGJmYzA4MTk5MyIsIm5hbWUiOiJFZHdhcmQiLCJpZGVudGl0eSI6IkFkbWluIiwiaWF0IjoxNjk0OTgzNDg1LCJleHAiOjE2OTQ5ODY0ODV9.uXDq73yg0OCin7m8hxLz8AuozBBoUHjhZYjIMU7eDk4
+
+
+###
+#PUT Update One of Articles
+PUT {{url_article}}65076674b79f63f3f78babb8
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MDYzYmZmNzczNjVkOGJmYzA4MTk5MyIsIm5hbWUiOiJFZHdhcmQiLCJpZGVudGl0eSI6IkFkbWluIiwiaWF0IjoxNjk0OTgzNDg1LCJleHAiOjE2OTQ5ODY0ODV9.uXDq73yg0OCin7m8hxLz8AuozBBoUHjhZYjIMU7eDk4
+{{json_article}}
+
+{
+    "body":"LLM model is useful in translating programming language."
+}
+
+###
+#DELETE Delete one of Tasks
+DELETE {{url_article}}65076674b79f63f3f78babb8
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MDYzYmZmNzczNjVkOGJmYzA4MTk5MyIsIm5hbWUiOiJFZHdhcmQiLCJpZGVudGl0eSI6IkFkbWluIiwiaWF0IjoxNjk0OTgzNDg1LCJleHAiOjE2OTQ5ODY0ODV9.uXDq73yg0OCin7m8hxLz8AuozBBoUHjhZYjIMU7eDk4
+
+###
+#GET List All Articles - Testing (No Need Authorization)
+GET {{url_article}}articles

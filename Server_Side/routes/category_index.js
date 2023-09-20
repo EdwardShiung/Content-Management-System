@@ -21,7 +21,7 @@ const categoricalRoutes = (app) =>{
     })
 
     //- List_All_Categories_API-Public_API\
-    router.get('/categoicalList', passport.authenticate('jwt',{session:false}), async(req, res) =>{
+    router.get('/categoricalList', passport.authenticate('jwt',{session:false}), async(req, res) =>{
         try {
             const items = await Category.find().populate('parent').limit(10);
             res.send(items);

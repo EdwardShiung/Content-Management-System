@@ -2,10 +2,13 @@ import express from 'express';
 import Article from '../model/Article.js';
 import passport from 'passport';
 
+
 //Using express router
 const router = express.Router();
 
 const articalRoutes = (app) =>{
+
+
     //Middleware For Router
     app.use('/api/article', router);
 

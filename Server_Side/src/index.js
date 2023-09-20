@@ -2,13 +2,16 @@ import express from 'express';
 import bodyParser from 'body-parser';
 import cors from 'cors';
 import connectMongoDB from '../plugin/db.js';
+import generalRoutes from '../routes/general_index.js';
 import userRoutes from '../routes/user_index.js';
 import categoricalRoutes from '../routes/category_index.js';
 import articalRoutes from '../routes/article_index.js';
 import initializePassport from '../plugin/passport.js'
 import passport from 'passport';
 
+
 const app = express();
+
 //-- Server Port
 const port  = 3000;
 
@@ -28,6 +31,11 @@ initializePassport(passport);
 connectMongoDB(app);
 
 //-- Routes Module
+//-- General Module
+generalRoutes(app);
+
+
+//--Specific Module
 //- User Module
 userRoutes(app);
 //- Categorical Module

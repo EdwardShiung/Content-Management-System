@@ -39,7 +39,7 @@ const userRoutes = (app) =>{
                 return res.json(addUser);
             }
         } catch (error) {
-            console.log(or);
+            console.log(error);
             res.status(500).json('Server Problem');
         }
     });
