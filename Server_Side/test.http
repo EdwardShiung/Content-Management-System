@@ -45,17 +45,17 @@ GET {{url_user}}users
 #Post Create a Category
 POST {{url_category}}create
 {{json_category}}
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MDYzYmZmNzczNjVkOGJmYzA4MTk5MyIsIm5hbWUiOiJFZHdhcmQiLCJpZGVudGl0eSI6IkFkbWluIiwiaWF0IjoxNjk1MDU1MzgwLCJleHAiOjE2OTUwNTgzODB9.NoE_0NCb8AbFomf9soklqpyGd6lt7Q1lQZRXkjVfFXc
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MDYzYmZmNzczNjVkOGJmYzA4MTk5MyIsIm5hbWUiOiJFZHdhcmQiLCJpZGVudGl0eSI6IkFkbWluIiwiaWF0IjoxNjk1MjI3OTg4LCJleHAiOjE2OTUyMzA5ODh9.QN2RbcXojWjhxlViaHAttpQL-88ORWP3jMU1OgZjmiM
 
 {
-    "name":"JavaScript",
+    "name":"Machie Learning",
     "parent":"65069fac698e7a712e72dc9b"
 }
 
 ###
 #GET ALL Categorical List by User
 GET {{url_category}}categoricalList
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MDYzYmZmNzczNjVkOGJmYzA4MTk5MyIsIm5hbWUiOiJFZHdhcmQiLCJpZGVudGl0eSI6IkFkbWluIiwiaWF0IjoxNjk1MDU1MzgwLCJleHAiOjE2OTUwNTgzODB9.NoE_0NCb8AbFomf9soklqpyGd6lt7Q1lQZRXkjVfFXc
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MDYzYmZmNzczNjVkOGJmYzA4MTk5MyIsIm5hbWUiOiJFZHdhcmQiLCJpZGVudGl0eSI6IkFkbWluIiwiaWF0IjoxNjk1MjI3OTg4LCJleHAiOjE2OTUyMzA5ODh9.QN2RbcXojWjhxlViaHAttpQL-88ORWP3jMU1OgZjmiM
 
 ###
 #PUT Update one of Categories
@@ -85,14 +85,14 @@ GET {{url_category}}categories
 #POST Create a Article
 POST {{url_article}}create
 {{json_article}}
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MDYzYmZmNzczNjVkOGJmYzA4MTk5MyIsIm5hbWUiOiJFZHdhcmQiLCJpZGVudGl0eSI6IkFkbWluIiwiaWF0IjoxNjk0OTgzNDg1LCJleHAiOjE2OTQ5ODY0ODV9.uXDq73yg0OCin7m8hxLz8AuozBBoUHjhZYjIMU7eDk4
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MDYzYmZmNzczNjVkOGJmYzA4MTk5MyIsIm5hbWUiOiJFZHdhcmQiLCJpZGVudGl0eSI6IkFkbWluIiwiaWF0IjoxNjk1MjI3OTg4LCJleHAiOjE2OTUyMzA5ODh9.QN2RbcXojWjhxlViaHAttpQL-88ORWP3jMU1OgZjmiM
 
 {
     "userId": "65063bd777365d8bfc08198f",
     "coverPic": "jkljlkjkldjklwjdlwkjdlk",
-    "title":"Large Language Model in Out Society",
+    "title":"Machine Learning",
     "categories": "65069fac698e7a712e72dc9b",
-    "body": "Hi, I would like to talke about OPEN AI",
+    "body": "Hey, what are you doing, right now",
     "status": "3"
 }
 

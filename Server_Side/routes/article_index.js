@@ -16,6 +16,7 @@ const articalRoutes = (app) =>{
     router.post('/create', passport.authenticate('jwt',{session: false}), async(req, res) =>{
         try {
             const {id} = req.user;
+            console.log(req.user);
             const newArticle = new Article({...req.body, userId:id});
             const saveArticle = await newArticle.save();
             res.status(200).json({
